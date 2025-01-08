@@ -1,0 +1,4 @@
+FROM eclipse-temurin:17-jdk
+ADD mtnNotificationGenerator/target/*.jar mtnNotificationGenerator.jar
+ADD mtnNotificationGenerator/target/libs/*.jar libs/
+ENTRYPOINT ["java","-jar","mtnNotificationGenerator.jar"]

@@ -1,0 +1,6 @@
+FROM eclipse-temurin:17-jdk
+EXPOSE 8089
+ADD mtnLoyaltyManagementConnector/target/*.jar mtnLoyaltyManagementConnector.jar
+ADD mtnLoyaltyManagementConnector/target/libs/*.jar libs/
+ADD mtnLoyaltyManagementConnector/elastic-apm-agent-1.51.0.jar elastic-apm-agent.jar
+ENTRYPOINT ["java","-javaagent:elastic-apm-agent.jar","-jar","mtnLoyaltyManagementConnector.jar"]

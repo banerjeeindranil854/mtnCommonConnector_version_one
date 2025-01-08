@@ -1,0 +1,19 @@
+  trigger:
+  - master
+  - main
+  - development
+  - release
+  - feature/*
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+resources:
+  repositories:
+    - repository: templates
+      type: GitHub
+      name: MTN-Group/madapi-azure-shared-pipeline
+      endpoint: github
+
+jobs:
+  - template: harbor-shared-17.yml@templates  # Template reference

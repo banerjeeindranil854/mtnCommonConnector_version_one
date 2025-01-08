@@ -1,0 +1,15 @@
+FROM gcr.io/apigee-microgateway/edgemicro:latest
+
+#RUN mkdir /opt/apigee/.edgemicro && mkdir /opt/apigee/logs && mkdir /opt/apigee/plugins
+
+RUN chown -R apigee:apigee /opt/apigee/.edgemicro /opt/apigee/logs /opt/apigee/plugins
+
+
+COPY apigee/plugins /opt/apigee/plugins
+COPY apigee/.edgemicro /opt/apigee/.edgemicro
+
+EXPOSE 8000
+EXPOSE 8443
+
+ENTRYPOINT ["edgemicro", "start"]
+
