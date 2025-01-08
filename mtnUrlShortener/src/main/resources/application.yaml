@@ -1,0 +1,42 @@
+
+spring:
+  data:
+    redis:
+      port: '6379'
+      timeout: '60000'
+      database: '0'
+      host: '127.0.0.1'
+  application:
+    name: mtnUrlShortener
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+  data:
+    redis:
+      port: '6379'
+      timeout: '60000'
+      database: '0'
+      host: '127.0.0.1'
+  application:
+    name: mtnUrlShortener-dev
+
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+  data:
+    redis:
+      port: '13529'
+      timeout: '60000'
+      database: 'indra-free-db'
+      host: redis://default:NKCbJ9euGguZoXOQEa9OSCEVyOMfl7Tn@redis-13529.c302.asia-northeast1-1.gce.redns.redis-cloud.com
+  application:
+    name: mtnUrlShortener-prod
+

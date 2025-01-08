@@ -1,10 +1,10 @@
-package com.mtn.publicConnector.backend.mtnBackendConnectorUserProfile;
+package com.mtn.shortner;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MtnBackendConnectorUserProfileApplicationTests {
+class MtnUrlShortenerApplicationTests {
 
 	@Test
 	void contextLoads() {
