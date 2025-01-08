@@ -1,0 +1,22 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  application:
+    name: mtnBackendConnectorCrowedTwist
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  application:
+    name: mtnBackendConnectorCrowedTwist-dev
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+  application:
+    name: mtnBackendConnectorCrowedTwist-prod
