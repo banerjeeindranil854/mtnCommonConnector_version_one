@@ -1,0 +1,62 @@
+services:
+  elasticsearch:
+    image: elasticsearch:7.9.1
+    container_name: elasticsearch
+    restart: always
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - test_data:/usr/share/elasticsearch/data/
+    environment:
+      - discovery.type=single-node
+      - http.host=0.0.0.0
+      - transport.host=0.0.0.0
+      - xpack.security.enabled=false
+      - xpack.monitoring.enabled=false
+      - cluster.name=elasticsearch
+      - bootstrap.memory_lock=true
+
+  apm-server:
+    image: docker.elastic.co/apm/apm-server:7.12.0
+    environment:
+      - ELASTIC_APM_SERVER_URL=http://elasticsearch:9200
+      - ELASTIC_APM_SECRET_TOKEN=apm-secret-token
+    ports:
+      - "8200:8200"
+    depends_on:
+      - elasticsearch
+
+  logstash:
+    image: logstash:7.9.1
+    container_name: logstash
+    ports:
+      - "5044:5044"
+      - "9600:9600"
+    volumes:
+      - type: bind
+        source: ./elk-config/logstash/
+        target: /usr/share/logstash/pipeline/
+
+      - ls_data:/usr/share/logstash/data
+    command: logstash -f /usr/share/logstash/pipeline/logstash.conf
+    depends_on:
+      - elasticsearch
+
+  kibana:
+    image: kibana:7.9.1
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    volumes:
+      - kb_data:/usr/share/kibana/data
+    depends_on:
+      - elasticsearch
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+
+volumes:
+  test_data:
+  ls_data:
+  kb_data:
+
