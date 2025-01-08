@@ -1,0 +1,67 @@
+services:
+  loyalty-management:
+    image: loyaltymanagement:latest
+    ports:
+      - "8089:8089"
+    volumes:
+      - commonconnector:/commonconnector
+  redisinsight:
+    container_name: redisinsight
+    ports:
+      - 5540:5540
+    image: redis/redisinsight:latest
+
+  redis:
+    ports:
+      - "6379:6379"
+    image: 'bitnami/redis:latest'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+
+  url-shortner:
+    image: dockerfileurlshotner:latest
+    ports:
+      - "8091:8091"
+    volumes:
+      - commonconnector:/commonconnector
+
+  user-profile:
+    image: dockerfileuserprofile:latest
+    ports:
+      - "8081:8081"
+    volumes:
+      - commonconnector:/commonconnector
+
+  notification-service:
+    image: dockerfilenotification:latest
+    ports:
+      - "8090:8090"
+    volumes:
+      - commonconnector:/commonconnector
+
+  rule-service:
+    image: dockerrule:latest
+    ports:
+      - "9999:9999"
+    volumes:
+      - commonconnector:/commonconnector
+
+  firefox:
+    image: jlesage/firefox
+    hostname: firefox
+    ports:
+      - 5801:5800
+
+  insomnia:
+    image: kasmweb/insomnia:1.14.0
+    hostname: insomnia
+    shm_size: 512m
+    environment:
+      - VNC_PW=password
+    ports:
+      - 6901:6901
+volumes:
+  commonconnector:
+  redisinsight:
+
+
