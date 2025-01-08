@@ -1,0 +1,22 @@
+name: apigee_service
+services:
+  edgemicrocustomplugin:
+    ports:
+      - 8000:8000
+    container_name: edgemicrocustomplugin
+
+    environment:
+      - EDGEMICRO_PLUGIN_DIR=/opt/apigee/plugins
+      - EDGEMICRO_ORG=mtn-preprod
+      - EDGEMICRO_ENV=preprod
+      - EDGEMICRO_KEY=e4ed7079ae771bfda2e558c616971b66af20a9b3aeffc77f3485d7b3ade71484
+      - EDGEMICRO_SECRET=24dab28a2cf219951cea8f75919348e0a22343c9743c7bd6cc9615c4991caf1d
+      - EDGEMICRO_CONFIG=/opt/apigee/.edgemicro
+      - SERVICE_NAME=edgemicrocustomplugin
+
+    image: apigee:latest
+  firefox:
+    image: jlesage/firefox
+    hostname: firefox
+    ports:
+      - 5802:5800

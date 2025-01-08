@@ -1,0 +1,23 @@
+{
+  "name": "noname-plugin",
+  "version": "3.0.1",
+  "description": "Noname custom Apigee MicroGateway plugin",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "^12 || ^14 || ^16"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-queue": "^3.8.10",
+    "https-proxy-agent": "^5.0.1"
+  },
+  "bundledDependencies": [
+    "better-queue",
+    "https-proxy-agent"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "strip-content-encoding",
+  "version": "1.0.0",
+  "description": "Remove errant header from Eswatini CIS response.  ('content-encoding' : 'utf8' ... should be gzip, br, deflate)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
