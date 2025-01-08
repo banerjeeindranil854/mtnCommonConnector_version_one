@@ -1,0 +1,5 @@
+FROM eclipse-temurin:17-jdk
+EXPOSE 8099
+ADD /target/*.jar mtnRuleEngine.jar
+ADD /target/libs/*.jar libs/
+ENTRYPOINT ["java","-jar","mtnRuleEngine.jar"]
