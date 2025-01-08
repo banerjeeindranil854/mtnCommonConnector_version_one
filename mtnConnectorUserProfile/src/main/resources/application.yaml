@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: mtnBackendConnectorUserProfile
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  application:
+    name: mtnBackendConnectorUserProfile-dev
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+  application:
+    name: mtnBackendConnectorUserProfile-prod

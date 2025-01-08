@@ -1,0 +1,16 @@
+{
+  "name": "x-auth-to-auth-header",
+  "version": "1.0.0",
+  "description": "Take the values of x-authorization header and injects them to authorization header then deletes the x-authorization header",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "edge",
+    "microgateway",
+    "plugin"
+  ],
+  "author": "Kumar Perla",
+  "license": "MIT"
+}

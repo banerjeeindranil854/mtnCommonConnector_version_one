@@ -1,0 +1,55 @@
+spring:
+  config:
+    activate:
+      on-profile: mtnSpringBatch
+  application:
+    name: batchProcessing
+crowedTwist:
+  url:
+    path: http://127.0.0.1:3658/m1/609582-576108-fde20dd6/crowerdTwist/
+
+custom:
+  header:
+    paramOne: api_key
+    valueOne: 636474848fcvkhgkgjgkgkg
+    paramTwo: client_id
+    valueTwo: 636474848fcvkhgkgjgkgkg
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+  application:
+    name: batchProcessing-dev
+crowedTwist:
+  url:
+    path: http://127.0.0.1:3658/m1/609582-576108-fde20dd6/crowerdTwist/
+
+custom:
+  header:
+    paramOne: api_key
+    valueOne: 636474848fcvkhgkgjgkgkg
+    paramTwo: client_id
+    valueTwo: 636474848fcvkhgkgjgkgkg
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+  application:
+    name: batchProcessing-prod
+crowedTwist:
+  url:
+    path: http://127.0.0.1:3658/m1/609582-576108-fde20dd6/crowerdTwist/
+
+custom:
+  header:
+    paramOne: api_key
+    valueOne: 636474848fcvkhgkgjgkgkg
+    paramTwo: client_id
+    valueTwo: 636474848fcvkhgkgjgkgkg
+

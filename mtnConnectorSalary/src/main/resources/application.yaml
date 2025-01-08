@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: mtnBackendConnectorSalary
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  application:
+    name: mtnBackendConnectorSalary-dev
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+  application:
+    name: mtnBackendConnectorSalary-prod
+

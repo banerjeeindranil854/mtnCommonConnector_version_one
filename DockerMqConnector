@@ -1,0 +1,5 @@
+FROM eclipse-temurin:17-jdk
+EXPOSE 8081
+ADD mtnComonConnectoribmMq/target/*.jar mtnComonConnectoribmMq.jar
+ADD mtnComonConnectoribmMq/target/libs/*.jar libs/
+ENTRYPOINT ["java","-jar","mtnComonConnectoribmMq.jar"]

@@ -1,0 +1,16 @@
+{
+  "name": "remove-bearer-auth-token",
+  "version": "1.0.0",
+  "description": "Removes Auth bearer token from request headers. Built for Siebel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "edge",
+    "microgateway",
+    "plugin"
+  ],
+  "author": "Kumar Perla",
+  "license": "MIT"
+}

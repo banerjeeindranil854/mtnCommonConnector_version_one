@@ -1,0 +1,11 @@
+{
+  "name": "provide-traceid",
+  "version": "1.0.0",
+  "description": "Inject traceId header.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "post-auth-countrycode",
+  "version": "1.0.0",
+  "description": "Examine headers for custom claims, inject new header with 3-digit country code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
