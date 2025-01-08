@@ -1,0 +1,27 @@
+name: Drool_work_bench
+services:
+  drools-workbench:
+    ports:
+      - 8001:8001
+      - 28080:8080
+    container_name: drools-workbench
+    environment:
+      M2_HOME: /usr/share/maven
+    volumes:
+      - commonconnector:/commonconnector
+    image: jboss/drools-workbench-showcase:latest
+
+
+  kie-server-showcase:
+    ports:
+      - 8081:8080
+    container_name: kie-server
+    depends_on:
+      - drools-workbench
+    links:
+      - drools-workbench:kie-wb
+    image: jboss/kie-server-showcase:latest
+
+
+volumes:
+  commonconnector:
