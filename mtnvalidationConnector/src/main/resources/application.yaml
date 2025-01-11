@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: mtnvalidationConnector-dev
+server:
+  port: '8083'
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  application:
+    name: mtnvalidationConnector-dev
+server:
+  port: '8083'
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+  application:
+    name: mtnvalidationConnector-prod
+server:
+  port: '8083'
