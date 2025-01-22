@@ -16,7 +16,7 @@ import org.springframework.context.annotation.PropertySources;
 				@PropertySource(value = "classpath:application.properties" ,ignoreResourceNotFound = false)
 		}
 )
-public class MtnBackendConnectorSalaryApplication {
+public class MtnBackendConnectorSalaryApplication { 
 
 	public static void main(String[] args) {
 		SpringApplication.run(MtnBackendConnectorSalaryApplication.class, args);

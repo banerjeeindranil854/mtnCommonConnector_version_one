@@ -21,7 +21,7 @@
 		<module>mtnvalidationConnector</module>
 		<module>mtnLoyaltyManagementConnector</module>
 		<module>mtnBatchProcessing</module>
-		<!--<module>mtnNotificationGenerator</module>-->
+		<module>mtnNotificationGenerator</module>
 		<module>mtnkafkaConsumer</module>
 		<module>mtnUrlShortener</module>
 		<module>mtnRuleEngine</module>
