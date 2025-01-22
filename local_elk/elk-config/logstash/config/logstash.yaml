@@ -1,0 +1,2 @@
+node.name: logstash_rule_engine
+api.environment: dev
