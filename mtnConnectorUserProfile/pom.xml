@@ -24,7 +24,7 @@
 				<activeByDefault>false</activeByDefault>
 			</activation>
 			<properties>
-				<start-class>com.mtn.publicConnector.backend.mtnBackendConnectorUserProfile</start-class>
+				<start-class>com.mtn.publicConnector.backend.mtnBackendConnectorUserProfile.MtnBackendConnectorUserProfileApplication</start-class>
 				<activatedProperties>dev</activatedProperties>
 			</properties>
 		</profile>
@@ -38,7 +38,7 @@
 				<activeByDefault>false</activeByDefault>
 			</activation>
 			<properties>
-					<start-class>com.mtn.publicConnector.backend.mtnBackendConnectorUserProfile</start-class>
+					<start-class>com.mtn.publicConnector.backend.mtnBackendConnectorUserProfile.MtnBackendConnectorUserProfileApplication</start-class>
 				    <activatedProperties>prod</activatedProperties>
 			</properties>
 		</profile>
