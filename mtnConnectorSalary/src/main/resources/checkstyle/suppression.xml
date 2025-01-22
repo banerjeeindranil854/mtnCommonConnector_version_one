@@ -7,4 +7,5 @@
     <suppress checks="MemberName"/>
     <suppress checks="FileTabCharacter"/>
     <suppress checks="JavadocVariable"/>
+    <suppress checks="NewlineAtEndOfFile"/>
 </suppressions>

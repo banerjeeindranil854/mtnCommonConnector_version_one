@@ -1,3 +1,4 @@
+
 package com.mtn.publicConnector.backend.mtnBackendConnectorSalary;
 
 import com.mtn.publicConnector.config.template.YamlPropertySourceFactory;
