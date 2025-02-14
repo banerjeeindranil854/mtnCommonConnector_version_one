@@ -13,7 +13,7 @@
 		<java.version>17</java.version>
 	</properties>
 	<modules>
-
+		<module>deepSheekChat</module>
 		<module>mtnCommonBean</module>
 		<module>mtnConnectorTemplate</module>
 		<module>mtnConnectorSalary</module>
