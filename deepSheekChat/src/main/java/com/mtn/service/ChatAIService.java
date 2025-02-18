@@ -1,4 +1,4 @@
-package com.javatechie.service;
+package com.mtn.service;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.stereotype.Service;
