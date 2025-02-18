@@ -103,37 +103,7 @@
 					</archive>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>3.4.0</version>
-				<executions>
-					<execution>
-						<id>validate</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<configLocation>${basedir}/src/main/resources/checkstyle/checkstyle.xml</configLocation>
-					<suppressionsLocation>${basedir}/src/main/resources/checkstyle/suppression.xml</suppressionsLocation>
-					<consoleOutput>true</consoleOutput>
-					<failsOnError>false</failsOnError>
-					<linkXRef>false</linkXRef>
-					<failOnViolation>false</failOnViolation>
-					<includeTestSourceDirectory>false</includeTestSourceDirectory>
-					<logViolationsToConsole>true</logViolationsToConsole>
-				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>com.puppycrawl.tools</groupId>
-						<artifactId>checkstyle</artifactId>
-						<version>10.17.0</version>
-					</dependency>
-				</dependencies>
-			</plugin>
+
 		</plugins>
 		<finalName>deepSheekChat</finalName>
 	</build>
