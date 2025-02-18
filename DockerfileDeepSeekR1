@@ -1,4 +1,4 @@
 FROM eclipse-temurin:17-jdk
-ADD mtnNotificationGenerator/target/*.jar deepSheekChat.jar
-ADD mtnNotificationGenerator/target/libs/*.jar libs/
+ADD deepSheekChat/target/*.jar deepSheekChat.jar
+ADD deepSheekChat/target/libs/*.jar libs/
 ENTRYPOINT ["java","-jar","deepSheekChat.jar"]
