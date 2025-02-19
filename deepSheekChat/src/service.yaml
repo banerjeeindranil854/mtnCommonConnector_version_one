@@ -1,10 +1,10 @@
 apiVersion: v1 # Kubernetes API version
 kind: Service # Kubernetes resource kind we are creating
 metadata: # Metadata of the resource kind we are creating
-  name: deepsheekchat
+  name: deepsheekchat-service
 spec:
   selector:
-    app: 9191
+    app: deepsheekchat
   ports:
     - protocol: "TCP"
       port: 9191 # The port that the service is running on in the cluster
