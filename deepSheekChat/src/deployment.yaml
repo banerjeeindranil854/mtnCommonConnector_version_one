@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: deepSheekChat
+  name: deepsheekchat
 spec:
   selector:
     matchLabels:
-      app: deepSheekChat
+      app: deepsheekchat
   replicas: 2 # Number of replicas that will be created for this deployment
   template:
     metadata:
       labels:
-        app: deepSheekChat
+        app: deepsheekchat
     spec:
       containers:
-        - name: deepSheekChat
+        - name: deepsheekchat
           image: dockerfiledeepseekr1:latest
           imagePullPolicy: IfNotPresent
           ports:
