@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: deepSheekChat
-          image: springboot-k8s-example:1.0 # Image that will be used to containers in the cluster
+          image: dockerfiledeepseekr1:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9191 # The port that the container is running on in the cluster
