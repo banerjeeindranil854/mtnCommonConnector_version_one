@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-jdk
+FROM eclipse-temurin:23-jdk
 ADD deepSheekChat/target/*.jar deepSheekChat.jar
 ADD deepSheekChat/target/libs/*.jar libs/
 ENTRYPOINT ["java","-jar","deepSheekChat.jar"]
